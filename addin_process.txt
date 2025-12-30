@@ -1,0 +1,418 @@
+le process lorsque l'on effectue l'ajout d'un item dans la cart
+
+dabors il y a cette requette 
+fetch("https://api-gtm.grubhub.com/carts", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+    "authorization": "Bearer 8e7180b9-f3d9-456d-b49a-bac409d82149",
+    "cache-control": "no-cache",
+    "content-type": "application/json;charset=UTF-8",
+    "if-modified-since": "0",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "x-gh-features": "60=78219;appName=@grubhubprod/order-taking-client-sdk;appVersion=16.4.0;",
+    "Referer": "https://www.grubhub.com/"
+  },
+  "body": "{\"brand\":\"GRUBHUB\",\"experiments\":[\"IGNORE_MINIMUM_TIP_REQUIREMENT\",\"LINEOPTION_ENHANCEMENTS\",\"ENABLE_BUNDLED_ORDER_PAYMENTS\",\"ROBOT_DELIVERY\"],\"cart_attributes\":[]}",
+  "method": "POST"
+});
+
+son paylaod
+{"brand":"GRUBHUB","experiments":["IGNORE_MINIMUM_TIP_REQUIREMENT","LINEOPTION_ENHANCEMENTS","ENABLE_BUNDLED_ORDER_PAYMENTS","ROBOT_DELIVERY"],"cart_attributes":[]}
+
+et sa reponse
+
+{
+    "id": "NJGEsOV9EfCEsVFazfuvFQ",
+    "uri": "/carts/NJGEsOV9EfCEsVFazfuvFQ",
+    "already_exists": false
+}
+
+
+ensuite dans la suite des requettes qui sont effectuer il y a 
+fetch("https://api-gtm.grubhub.com/carts/NJGEsOV9EfCEsVFazfuvFQ", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+    "authorization": "Bearer 8e7180b9-f3d9-456d-b49a-bac409d82149",
+    "cache-control": "no-cache",
+    "if-modified-since": "0",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "x-gh-features": "60=78219;appName=@grubhubprod/order-taking-client-sdk;appVersion=16.4.0;",
+    "Referer": "https://www.grubhub.com/"
+  },
+  "body": null,
+  "method": "GET"
+});
+
+et sa reponse est :
+{
+    "id": "NJGEsOV9EfCEsVFazfuvFQ",
+    "diner_id": "Nb2gEOVmEfCAhK16zbYF0A",
+    "group_id": "NJGEsuV9EfCEs1FazfuvFQ",
+    "when_for": "2025-12-30T12:43:57.133Z",
+    "group_type": null,
+    "group_payment_mode": null,
+    "currency": "USD",
+    "fulfillment_info": null,
+    "notification_preferences": null,
+    "experiments": [
+        "ADDING_PAYMENT_ADJUSTMENT",
+        "CALCULATOR_WORKFLOW_AUTHORITY",
+        "CALCULATOR_WORKFLOW_REVERSE_SHADOW",
+        "CONSOLIDATE_MERCHANT_SOURCED_FEE_TAX_CALCULATION",
+        "CONSUME_ORDER_REQUEST_VIA_KAFKA",
+        "CONSUME_STATUS_UPDATE_VIA_KAFKA",
+        "DIRECT_CARTS_ENABLED",
+        "DMP_ENABLED_V2",
+        "DMP_PAYMENTS_WITH_PAYMENT_ATTRIBUTION",
+        "DO_NOT_ADD_SERVICE_FEE_TO_MERCHANT_TOTAL",
+        "ENABLE_AUTONOMOUS_DELIVERY",
+        "ENABLE_BUNDLED_ORDER_PAYMENTS",
+        "ENABLE_ORDER_PART_ALCOHOL_ATTRIBUTE_POPULATION",
+        "ENABLE_POSTCHECKOUT_PUBLISHING",
+        "ENABLE_TAX_ENGINE_FOR_PAYMENT_REFRESH",
+        "FEE_ATTRIBUTION_POWERED",
+        "FLEXIBLE_FEES",
+        "GROUP_ORDER_ENABLE_MULTI_PAYER_CARTS",
+        "IGNORE_MINIMUM_TIP_REQUIREMENT",
+        "INHERIT_PARENT_TAX_CATEGORY",
+        "INTEGRATE_TAX_ENGINE_FEES",
+        "LINEOPTION_ENHANCEMENTS",
+        "MAS_USE_64BIT_REST_ID",
+        "MULTIPLE_ORDER_PART_SHARED_CART",
+        "ORDERS_DAPI_UPDATE_POST_CONFIRMED",
+        "ORDERS_QUEUE_MIGRATION_MAS_ADJUSTMENT_PUBLISH",
+        "ORDERS_QUEUE_MIGRATION_MAS_STATUSUPDATE_PUBLISH",
+        "ORDER_UUID_AS_GROUP_IDENTIFIER",
+        "POS_VALIDATION_USE_CONTEXT",
+        "PRESERVE_LINE_FORMAT_TO_TAX_ENGINE",
+        "PUBLISH_CARTING_TAX_EVENT",
+        "PUBLISH_ORDER_REQUEST_V2_VIA_KAFKA",
+        "PUBLISH_STATUS_UPDATE_VIA_KAFKA",
+        "ROBOT_DELIVERY",
+        "SEND_ALL_ENTITLEMENTS_AT_ONCE_ON_GROUP_PAYMENT_UPDATE",
+        "SEND_PARTICIPANT_ITEMS_TO_CONTENT",
+        "TAX_ENGINE_SOURCE_OF_TRUTH",
+        "USE_CONTENT_VAR_ID_PREFIX",
+        "USE_NEW_FEE_TAXABLE_AMOUNT_LOGIC",
+        "VALIDATE_DELIVERY_AT_CHECKOUT",
+        "WRITE_LATEST_ORDER_REQUEST_TO_LOOKUP"
+    ],
+    "cart_attributes": [],
+    "charges": null,
+    "payments": {},
+    "savings_breakdown": null,
+    "restaurant_ids": [],
+    "restaurants": null,
+    "affiliate": null,
+    "time_placed": null,
+    "recommended_tip_settings": {
+        "minimum_tip_amount": 0,
+        "minimum_tip_percentage": 0.0
+    },
+    "catering_info": null,
+    "edit_window_close": null,
+    "ordering_info": {
+        "type": "STANDARD",
+        "tiers": [],
+        "eta": "2025-12-30T12:43:57.133Z",
+        "estimate_range": null,
+        "real_time_eta": {
+            "estimate_range": null,
+            "eta_options": []
+        }
+    },
+    "action_messages": {},
+    "update_metadata": null,
+    "adjustments": null,
+    "action_messages_metadata": {
+        "chain_small_order_fee": null,
+        "free_menu_item": null,
+        "free_menu_category": null,
+        "subscription_validation_parts": null
+    },
+    "submission_time": null,
+    "pnp_substitution_rule": null,
+    "order_request_uuid": "MPIZ_l-GPv2dBFySfx06Lw",
+    "silo_id": null,
+    "state": "ACTIVE",
+    "status": "ACTIVE",
+    "multi_part_shared_cart_enabled": true,
+    "asap": true,
+    "anchor": false,
+    "group_admin": false
+}
+
+ensuite apres ca il y a cette requette qui est effectuer :
+fetch("https://api-gtm.grubhub.com/carts/NJGEsOV9EfCEsVFazfuvFQ/lines", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+    "authorization": "Bearer 8e7180b9-f3d9-456d-b49a-bac409d82149",
+    "cache-control": "no-cache",
+    "content-type": "application/json;charset=UTF-8",
+    "if-modified-since": "0",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "x-gh-features": "60=78219;appName=@grubhubprod/order-taking-client-sdk;appVersion=16.4.0;",
+    "Referer": "https://www.grubhub.com/"
+  },
+  "body": "{\"menu_item_id\":\"303559338208\",\"brand\":\"GRUBHUB\",\"experiments\":[\"LINEOPTION_ENHANCEMENTS\"],\"quantity\":1,\"special_instructions\":\"\",\"options\":[{\"quantity\":1,\"id\":319065157832,\"child_options\":[],\"sub_option_ids\":[]},{\"quantity\":1,\"id\":303559348440,\"child_options\":[],\"sub_option_ids\":[]},{\"quantity\":1,\"id\":303559353296,\"child_options\":[],\"sub_option_ids\":[]},{\"quantity\":1,\"id\":303559348968,\"child_options\":[],\"sub_option_ids\":[]}],\"cost\":9.59,\"restaurant_id\":\"2292950\",\"popular\":false,\"isBadged\":false,\"source\":\"restaurant menu section_other menu categories\"}",
+  "method": "POST"
+});
+
+son payload : 
+{"menu_item_id":"303559338208","brand":"GRUBHUB","experiments":["LINEOPTION_ENHANCEMENTS"],"quantity":1,"special_instructions":"","options":[{"quantity":1,"id":319065157832,"child_options":[],"sub_option_ids":[]},{"quantity":1,"id":303559348440,"child_options":[],"sub_option_ids":[]},{"quantity":1,"id":303559353296,"child_options":[],"sub_option_ids":[]},{"quantity":1,"id":303559348968,"child_options":[],"sub_option_ids":[]}],"cost":9.59,"restaurant_id":"2292950","popular":false,"isBadged":false,"source":"restaurant menu section_other menu categories"}
+
+et sa reponse : 
+{
+    "id": "NcNN8OV9EfCN8Ws3ccax4Q",
+    "uri": "/carts/NJGEsOV9EfCEsVFazfuvFQ/lines/NcNN8OV9EfCN8Ws3ccax4Q",
+    "already_exists": false
+}
+
+et en dernier il y a cette requette : 
+fetch("https://api-gtm.grubhub.com/carts/NJGEsOV9EfCEsVFazfuvFQ", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+    "authorization": "Bearer 8e7180b9-f3d9-456d-b49a-bac409d82149",
+    "cache-control": "no-cache",
+    "if-modified-since": "0",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "x-gh-features": "60=78219;appName=@grubhubprod/order-taking-client-sdk;appVersion=16.4.0;",
+    "Referer": "https://www.grubhub.com/"
+  },
+  "body": null,
+  "method": "GET"
+});
+
+sa reponse : 
+{
+    "id": "NJGEsOV9EfCEsVFazfuvFQ",
+    "diner_id": "Nb2gEOVmEfCAhK16zbYF0A",
+    "group_id": "NJGEsuV9EfCEs1FazfuvFQ",
+    "when_for": "2025-12-30T12:53:59.226Z",
+    "group_type": null,
+    "group_payment_mode": null,
+    "currency": "USD",
+    "fulfillment_info": {
+        "type": "INCOMPLETE_PICKUP",
+        "delivery_info": null,
+        "pickup_info": null,
+        "incomplete_delivery": null,
+        "incomplete_pickup": null,
+        "individual_info": null
+    },
+    "notification_preferences": null,
+    "experiments": [
+        "ADDING_PAYMENT_ADJUSTMENT",
+        "CALCULATOR_WORKFLOW_AUTHORITY",
+        "CALCULATOR_WORKFLOW_REVERSE_SHADOW",
+        "CONSOLIDATE_MERCHANT_SOURCED_FEE_TAX_CALCULATION",
+        "CONSUME_ORDER_REQUEST_VIA_KAFKA",
+        "CONSUME_STATUS_UPDATE_VIA_KAFKA",
+        "DIRECT_CARTS_ENABLED",
+        "DMP_ENABLED_V2",
+        "DMP_PAYMENTS_WITH_PAYMENT_ATTRIBUTION",
+        "DO_NOT_ADD_SERVICE_FEE_TO_MERCHANT_TOTAL",
+        "ENABLE_AUTONOMOUS_DELIVERY",
+        "ENABLE_BUNDLED_ORDER_PAYMENTS",
+        "ENABLE_ORDER_PART_ALCOHOL_ATTRIBUTE_POPULATION",
+        "ENABLE_POSTCHECKOUT_PUBLISHING",
+        "ENABLE_TAX_ENGINE_FOR_PAYMENT_REFRESH",
+        "FEE_ATTRIBUTION_POWERED",
+        "FLEXIBLE_FEES",
+        "GROUP_ORDER_ENABLE_MULTI_PAYER_CARTS",
+        "IGNORE_MINIMUM_TIP_REQUIREMENT",
+        "INHERIT_PARENT_TAX_CATEGORY",
+        "INTEGRATE_TAX_ENGINE_FEES",
+        "LINEOPTION_ENHANCEMENTS",
+        "MAS_USE_64BIT_REST_ID",
+        "MULTIPLE_ORDER_PART_SHARED_CART",
+        "ORDERS_DAPI_UPDATE_POST_CONFIRMED",
+        "ORDERS_QUEUE_MIGRATION_MAS_ADJUSTMENT_PUBLISH",
+        "ORDERS_QUEUE_MIGRATION_MAS_STATUSUPDATE_PUBLISH",
+        "ORDER_UUID_AS_GROUP_IDENTIFIER",
+        "POS_VALIDATION_USE_CONTEXT",
+        "PRESERVE_LINE_FORMAT_TO_TAX_ENGINE",
+        "PUBLISH_CARTING_TAX_EVENT",
+        "PUBLISH_ORDER_REQUEST_V2_VIA_KAFKA",
+        "PUBLISH_STATUS_UPDATE_VIA_KAFKA",
+        "ROBOT_DELIVERY",
+        "SEND_ALL_ENTITLEMENTS_AT_ONCE_ON_GROUP_PAYMENT_UPDATE",
+        "SEND_PARTICIPANT_ITEMS_TO_CONTENT",
+        "TAX_ENGINE_SOURCE_OF_TRUTH",
+        "USE_CONTENT_VAR_ID_PREFIX",
+        "USE_NEW_FEE_TAXABLE_AMOUNT_LOGIC",
+        "VALIDATE_DELIVERY_AT_CHECKOUT",
+        "WRITE_LATEST_ORDER_REQUEST_TO_LOOKUP"
+    ],
+    "cart_attributes": [],
+    "charges": {
+        "lines": {
+            "diner_total": 959,
+            "line_items": [
+                {
+                    "id": "NcNN8OV9EfCN8Ws3ccax4Q",
+                    "menu_item_id": "303559338208",
+                    "menu_category_id": "303559336792",
+                    "name": "Cheese Hoagie",
+                    "price": 529,
+                    "display_price": null,
+                    "quantity": 1,
+                    "weight": null,
+                    "requested_weight": null,
+                    "measurement_unit": null,
+                    "diner_total": 959,
+                    "options": [
+                        {
+                            "id": "319065157832",
+                            "name": "Classic Roll",
+                            "price": 430,
+                            "quantity": 1,
+                            "child_options": []
+                        },
+                        {
+                            "id": "303559348440",
+                            "name": "Toast Roll or Bread Only",
+                            "price": 0,
+                            "quantity": 1,
+                            "child_options": []
+                        },
+                        {
+                            "id": "303559353296",
+                            "name": "Pepper Jack",
+                            "price": 0,
+                            "quantity": 1,
+                            "child_options": []
+                        },
+                        {
+                            "id": "303559348968",
+                            "name": "Pepper Jack",
+                            "price": 0,
+                            "quantity": 1,
+                            "child_options": []
+                        }
+                    ],
+                    "special_instructions": null,
+                    "restaurant_id": "2292950",
+                    "badges": [],
+                    "item_coupon": false,
+                    "combinable_with_coupons": false,
+                    "adjustments": null,
+                    "item_tags": [],
+                    "packaging_options": []
+                }
+            ]
+        },
+        "diner_subtotal": 959,
+        "fees": {
+            "total": 0,
+            "delivery": 0,
+            "service": 0,
+            "fee_items": [],
+            "fee_amount_saved_if_pickup": null,
+            "promotion_infos": []
+        },
+        "donations": null,
+        "taxes": {
+            "total": 58,
+            "delivery": 0,
+            "sales": 58,
+            "service": 0,
+            "fee_tax_items": []
+        },
+        "exempted_taxes": null,
+        "tip": {
+            "amount": 0,
+            "type": "INCLUDE_IN_BILL"
+        },
+        "diner_grand_total": 1017,
+        "adjustments": null,
+        "add_ons": []
+    },
+    "payments": {},
+    "savings_breakdown": null,
+    "restaurant_ids": [
+        "2292950"
+    ],
+    "restaurants": [
+        {
+            "id": "2292950",
+            "name": "Wawa",
+            "badges": [
+                {
+                    "badge_data": null,
+                    "name": "loyalty_info",
+                    "type": "BASIC"
+                }
+            ],
+            "managed_delivery": true
+        }
+    ],
+    "affiliate": null,
+    "time_placed": null,
+    "recommended_tip_settings": {
+        "minimum_tip_amount": 0,
+        "minimum_tip_percentage": 0.0
+    },
+    "catering_info": null,
+    "edit_window_close": null,
+    "ordering_info": {
+        "type": "STANDARD",
+        "tiers": [],
+        "eta": "2025-12-30T12:53:59.226Z",
+        "estimate_range": {
+            "minimum": 10,
+            "maximum": 20
+        },
+        "real_time_eta": {
+            "estimate_range": null,
+            "eta_options": []
+        }
+    },
+    "action_messages": {},
+    "update_metadata": null,
+    "adjustments": null,
+    "action_messages_metadata": {
+        "chain_small_order_fee": null,
+        "free_menu_item": null,
+        "free_menu_category": null,
+        "subscription_validation_parts": null
+    },
+    "submission_time": null,
+    "pnp_substitution_rule": null,
+    "order_request_uuid": "CEaGfbuMPzeRysLwUNs5GQ",
+    "silo_id": null,
+    "state": "ACTIVE",
+    "status": "ACTIVE",
+    "asap": true,
+    "anchor": false,
+    "multi_part_shared_cart_enabled": true,
+    "group_admin": false
+}

@@ -1,0 +1,682 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "WebInspector",
+      "version": "537.36"
+    },
+    "pages": [
+      {
+        "startedDateTime": "2025-12-30T10:40:00.844Z",
+        "id": "page_1",
+        "title": "https://www.grubhub.com/restaurant/wawa-3820-nazareth-rd-easton/2292950",
+        "pageTimings": {
+          "onContentLoad": 828.0460000005405,
+          "onLoad": 7179.24099999982
+        }
+      }
+    ],
+    "entries": [
+      {
+        "_connectionId": "48312",
+        "_initiator": {
+          "type": "script",
+          "stack": {
+            "callFrames": [
+              {
+                "functionName": "",
+                "scriptId": "3110",
+                "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                "lineNumber": 2,
+                "columnNumber": 2663865
+              },
+              {
+                "functionName": "",
+                "scriptId": "3110",
+                "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                "lineNumber": 2,
+                "columnNumber": 2651753
+              },
+              {
+                "functionName": "",
+                "scriptId": "3110",
+                "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                "lineNumber": 2,
+                "columnNumber": 2722071
+              },
+              {
+                "functionName": "i",
+                "scriptId": "3110",
+                "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                "lineNumber": 2,
+                "columnNumber": 2721838
+              },
+              {
+                "functionName": "jp",
+                "scriptId": "3110",
+                "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                "lineNumber": 2,
+                "columnNumber": 661152
+              },
+              {
+                "functionName": "",
+                "scriptId": "3110",
+                "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                "lineNumber": 2,
+                "columnNumber": 657341
+              }
+            ],
+            "parent": {
+              "description": "Promise.then",
+              "callFrames": [
+                {
+                  "functionName": "",
+                  "scriptId": "3110",
+                  "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                  "lineNumber": 2,
+                  "columnNumber": 656988
+                },
+                {
+                  "functionName": "Sp",
+                  "scriptId": "3110",
+                  "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                  "lineNumber": 2,
+                  "columnNumber": 656740
+                },
+                {
+                  "functionName": "apply",
+                  "scriptId": "3110",
+                  "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                  "lineNumber": 2,
+                  "columnNumber": 655844
+                },
+                {
+                  "functionName": "",
+                  "scriptId": "3111",
+                  "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                  "lineNumber": 2,
+                  "columnNumber": 305776
+                }
+              ],
+              "parent": {
+                "description": "Promise.then",
+                "callFrames": [
+                  {
+                    "functionName": "n",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 305727
+                  },
+                  {
+                    "functionName": "l.makePromise",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 306488
+                  },
+                  {
+                    "functionName": "e.processRequestQueue",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 306741
+                  },
+                  {
+                    "functionName": "e.addErrorHandler",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 306515
+                  },
+                  {
+                    "functionName": "e.execute",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 305889
+                  },
+                  {
+                    "functionName": "e.post",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 304624
+                  },
+                  {
+                    "functionName": "e.postRequest",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 619073
+                  },
+                  {
+                    "functionName": "e.addItem",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 610862
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 368169
+                  },
+                  {
+                    "functionName": "c",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 356213
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 355496
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 355221
+                  },
+                  {
+                    "functionName": "St",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 355018
+                  },
+                  {
+                    "functionName": "a",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 367523
+                  },
+                  {
+                    "functionName": "e.addItem",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 368894
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 70016
+                  },
+                  {
+                    "functionName": "s",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 65211
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 64494
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 64219
+                  },
+                  {
+                    "functionName": "Hn",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 64016
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 68964
+                  },
+                  {
+                    "functionName": "e.launchCartErrors",
+                    "scriptId": "3111",
+                    "url": "https://assets.grubhub.com/js/main-08126090be08e2ae4403.js",
+                    "lineNumber": 2,
+                    "columnNumber": 946704
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 68927
+                  },
+                  {
+                    "functionName": "s",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 65211
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 64494
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 64219
+                  },
+                  {
+                    "functionName": "Hn",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 64016
+                  },
+                  {
+                    "functionName": "be",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 67948
+                  },
+                  {
+                    "functionName": "ze",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 34584
+                  },
+                  {
+                    "functionName": "Object.leading",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2400
+                  },
+                  {
+                    "functionName": "e",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 1273321
+                  },
+                  {
+                    "functionName": "_",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 1273968
+                  },
+                  {
+                    "functionName": "onClick",
+                    "scriptId": "3415",
+                    "url": "https://assets.grubhub.com/js/73-707e719d8e0ec6b9d194.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2902
+                  },
+                  {
+                    "functionName": "s",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2845498
+                  },
+                  {
+                    "functionName": "f",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2845641
+                  },
+                  {
+                    "functionName": "m",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2845695
+                  },
+                  {
+                    "functionName": "y",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2845875
+                  },
+                  {
+                    "functionName": "mt",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2861675
+                  },
+                  {
+                    "functionName": "pt",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2861485
+                  },
+                  {
+                    "functionName": "ht",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2861841
+                  },
+                  {
+                    "functionName": "Tt",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2863048
+                  },
+                  {
+                    "functionName": "F",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2960167
+                  },
+                  {
+                    "functionName": "V",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2847199
+                  },
+                  {
+                    "functionName": "ln",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2869108
+                  },
+                  {
+                    "functionName": "un",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2868670
+                  },
+                  {
+                    "functionName": "t.unstable_runWithPriority",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2965877
+                  },
+                  {
+                    "functionName": "si",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2890676
+                  },
+                  {
+                    "functionName": "L",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2960022
+                  },
+                  {
+                    "functionName": "an",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2868486
+                  },
+                  {
+                    "functionName": "r",
+                    "scriptId": "3110",
+                    "url": "https://assets.grubhub.com/js/vendor-2163ff341731f2407cce.js",
+                    "lineNumber": 2,
+                    "columnNumber": 2647594
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "_priority": "High",
+        "_resourceType": "xhr",
+        "cache": {},
+        "connection": "4446",
+        "pageref": "page_1",
+        "request": {
+          "method": "POST",
+          "url": "https://api-gtm.grubhub.com/carts/7Ngq4OVmEfCq4Q-K3_WFAA/lines",
+          "httpVersion": "http/2.0",
+          "headers": [
+            {
+              "name": ":authority",
+              "value": "api-gtm.grubhub.com"
+            },
+            {
+              "name": ":method",
+              "value": "POST"
+            },
+            {
+              "name": ":path",
+              "value": "/carts/7Ngq4OVmEfCq4Q-K3_WFAA/lines"
+            },
+            {
+              "name": ":scheme",
+              "value": "https"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "accept-encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "accept-language",
+              "value": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7"
+            },
+            {
+              "name": "cache-control",
+              "value": "no-cache"
+            },
+            {
+              "name": "content-length",
+              "value": "414"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json;charset=UTF-8"
+            },
+            {
+              "name": "if-modified-since",
+              "value": "0"
+            },
+            {
+              "name": "origin",
+              "value": "https://www.grubhub.com"
+            },
+            {
+              "name": "priority",
+              "value": "u=1, i"
+            },
+            {
+              "name": "referer",
+              "value": "https://www.grubhub.com/"
+            },
+            {
+              "name": "sec-ch-ua",
+              "value": "\"Chromium\";v=\"142\", \"Google Chrome\";v=\"142\", \"Not_A Brand\";v=\"99\""
+            },
+            {
+              "name": "sec-ch-ua-mobile",
+              "value": "?0"
+            },
+            {
+              "name": "sec-ch-ua-platform",
+              "value": "\"Linux\""
+            },
+            {
+              "name": "sec-fetch-dest",
+              "value": "empty"
+            },
+            {
+              "name": "sec-fetch-mode",
+              "value": "cors"
+            },
+            {
+              "name": "sec-fetch-site",
+              "value": "same-site"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "x-gh-features",
+              "value": "60=18045;appName=@grubhubprod/order-taking-client-sdk;appVersion=16.4.0;"
+            }
+          ],
+          "queryString": [],
+          "cookies": [],
+          "headersSize": -1,
+          "bodySize": 414,
+          "postData": {
+            "mimeType": "application/json;charset=UTF-8",
+            "text": "{\"menu_item_id\":\"303559337064\",\"brand\":\"GRUBHUB\",\"experiments\":[\"LINEOPTION_ENHANCEMENTS\"],\"quantity\":1,\"special_instructions\":\"\",\"options\":[{\"quantity\":1,\"id\":303559339504,\"child_options\":[],\"sub_option_ids\":[]},{\"quantity\":1,\"id\":303559345632,\"child_options\":[],\"sub_option_ids\":[]}],\"cost\":7.39,\"restaurant_id\":\"2292950\",\"popular\":false,\"isBadged\":false,\"source\":\"restaurant menu section_other menu categories\"}"
+          }
+        },
+        "response": {
+          "status": 201,
+          "statusText": "",
+          "httpVersion": "http/2.0",
+          "headers": [
+            {
+              "name": "accept-ranges",
+              "value": "bytes"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://www.grubhub.com"
+            },
+            {
+              "name": "access-control-expose-headers",
+              "value": "x-fastly-latitude,x-fastly-longitude,gh-test,Content-Disposition,maxActiveOverrideMarkets,bff-type,Content-Length,gh-request-id,Location"
+            },
+            {
+              "name": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "content-length",
+              "value": "116"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "date",
+              "value": "Tue, 30 Dec 2025 11:14:25 GMT"
+            },
+            {
+              "name": "gh-request-id",
+              "value": "b3280e50-e570-11f0-8e51-5bbc6c4ea0cb"
+            },
+            {
+              "name": "location",
+              "value": "/carts/7Ngq4OVmEfCq4Q-K3_WFAA/lines/sygOUOVwEfCOUVu8bE6gyw"
+            },
+            {
+              "name": "server",
+              "value": "envoy"
+            },
+            {
+              "name": "strict-transport-security",
+              "value": "max-age=31536000"
+            },
+            {
+              "name": "vary",
+              "value": "origin"
+            },
+            {
+              "name": "via",
+              "value": "1.1 varnish, 1.1 varnish"
+            },
+            {
+              "name": "x-cache",
+              "value": "MISS, MISS, MISS"
+            },
+            {
+              "name": "x-cache-hits",
+              "value": "0, 0, 0"
+            },
+            {
+              "name": "x-envoy-upstream-service-time",
+              "value": "224"
+            },
+            {
+              "name": "x-served-by",
+              "value": "cache-iad-kcgs7200084-IAD, cache-iad-kcgs7200084-IAD, cache-ams21031-AMS"
+            },
+            {
+              "name": "x-timer",
+              "value": "S1767093265.263460,VS0,VE360"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "size": 121,
+            "mimeType": "application/json"
+          },
+          "redirectURL": "/carts/7Ngq4OVmEfCq4Q-K3_WFAA/lines/sygOUOVwEfCOUVu8bE6gyw",
+          "headersSize": -1,
+          "bodySize": -1,
+          "_transferSize": 340,
+          "_error": null,
+          "_fetchedViaServiceWorker": false
+        },
+        "serverIPAddress": "185.107.57.6",
+        "startedDateTime": "2025-12-30T11:14:24.987Z",
+        "time": 893.4750000007625,
+        "timings": {
+          "blocked": 250.4929999993576,
+          "dns": -1,
+          "ssl": -1,
+          "connect": -1,
+          "send": 0.18699999999999994,
+          "wait": 483.14000000011094,
+          "receive": 159.65500000129396,
+          "_blocked_queueing": 249.57899999935762,
+          "_blocked_proxy": 0.383,
+          "_workerStart": -249.308,
+          "_workerReady": -248.936,
+          "_workerFetchStart": -1,
+          "_workerRespondWithSettled": -1
+        }
+      }
+    ]
+  }
+}

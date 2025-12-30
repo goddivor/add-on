@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Grubhub Cart Saver",
+  "version": "1.0.0",
+  "description": "Save and restore your Grubhub cart with all items and modifiers",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.grubhub.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.grubhub.com/*"],
+      "js": ["content-script.js"],
+      "css": ["style.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*.png", "injected-script.js"],
+      "matches": ["*://*.grubhub.com/*"]
+    }
+  ]
+}
