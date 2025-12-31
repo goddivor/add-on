@@ -29,14 +29,14 @@ async function loadCartStatus() {
 
       // Afficher qu'il y a un panier
       statusDiv.className = 'status has-cart';
-      statusMessage.textContent = 'Panier sauvegardé disponible';
+      statusMessage.textContent = 'Saved cart available';
 
       // Afficher les détails
       cartInfo.innerHTML = `
         <strong>Restaurant ID:</strong> ${cart.context.restaurantId || 'N/A'}<br>
-        <strong>Nombre d'items:</strong> ${itemCount}<br>
-        <strong>Méthode:</strong> ${cart.context.orderMethod || 'N/A'}<br>
-        <strong>Sauvegardé le:</strong> ${date.toLocaleDateString('fr-FR')} à ${date.toLocaleTimeString('fr-FR')}
+        <strong>Number of items:</strong> ${itemCount}<br>
+        <strong>Method:</strong> ${cart.context.orderMethod || 'N/A'}<br>
+        <strong>Saved on:</strong> ${date.toLocaleDateString('en-US')} at ${date.toLocaleTimeString('en-US')}
       `;
       cartInfo.classList.remove('hidden');
 
@@ -46,14 +46,14 @@ async function loadCartStatus() {
     } else {
       // Pas de panier sauvegardé
       statusDiv.className = 'status no-cart';
-      statusMessage.textContent = 'Aucun panier sauvegardé';
+      statusMessage.textContent = 'No saved cart';
       cartInfo.classList.add('hidden');
       viewCartBtn.classList.add('hidden');
       clearCartBtn.classList.add('hidden');
     }
   } catch (error) {
     console.error('[Cart Saver] Error loading cart status:', error);
-    statusMessage.textContent = 'Erreur de chargement';
+    statusMessage.textContent = 'Loading error';
   }
 }
 
@@ -65,7 +65,7 @@ viewCartBtn.addEventListener('click', async () => {
     const result = await chrome.storage.local.get('savedCart');
     if (result.savedCart) {
       console.log('[Cart Saver] Saved Cart:', result.savedCart);
-      alert(`Panier sauvegardé:\n\n${JSON.stringify(result.savedCart, null, 2)}\n\nVoir la console pour plus de détails.`);
+      alert(`Saved cart:\n\n${JSON.stringify(result.savedCart, null, 2)}\n\nSee console for more details.`);
     }
   } catch (error) {
     console.error('[Cart Saver] Error viewing cart:', error);
@@ -76,14 +76,14 @@ viewCartBtn.addEventListener('click', async () => {
  * Supprime le panier sauvegardé
  */
 clearCartBtn.addEventListener('click', async () => {
-  if (confirm('Êtes-vous sûr de vouloir supprimer le panier sauvegardé ?')) {
+  if (confirm('Are you sure you want to delete the saved cart?')) {
     try {
       await chrome.storage.local.remove('savedCart');
       console.log('[Cart Saver] Cart cleared');
       loadCartStatus(); // Recharger l'interface
     } catch (error) {
       console.error('[Cart Saver] Error clearing cart:', error);
-      alert('Erreur lors de la suppression du panier');
+      alert('Error deleting cart');
     }
   }
 });

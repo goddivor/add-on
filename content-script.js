@@ -190,9 +190,10 @@ async function handleLoadCart() {
     showNotification(`Adding ${payloads.length} items to cart...`, 'info');
     await readdItemsToCart(payloads);
 
-    // Ouvrir le cart pour afficher les items ajoutés
-    await openCart();
-    showNotification('Cart loaded successfully!', 'success');
+    // Recharger la page pour afficher les items
+    showNotification('Cart loaded! Reloading page...', 'success');
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    window.location.reload();
 
   } catch (error) {
     console.error('[Cart Saver] Error loading cart:', error);
@@ -360,12 +361,18 @@ async function readdItemsToCart(payloads) {
       // Mettre à jour le localStorage
       updateLocalStorageCart(cartId, updatedCart);
 
-      await new Promise(resolve => setTimeout(resolve, 300));
+      // Attendre un peu entre chaque item
+      await new Promise(resolve => setTimeout(resolve, 500));
 
     } catch (error) {
       console.error('[Cart Saver] Error adding item:', payload, error);
     }
   }
+
+  // Attendre un peu que toutes les requêtes se terminent
+  await new Promise(resolve => setTimeout(resolve, 500));
+
+  console.log('[Cart Saver] All items added successfully! Reloading page...');
 }
 
 /**
@@ -390,30 +397,6 @@ function updateLocalStorageCart(cartId, cartData) {
 
   } catch (e) {
     console.error('[Cart Saver] Error updating localStorage:', e);
-  }
-}
-
-/**
- * Ouvre le cart popover
- */
-async function openCart() {
-  try {
-    const cartButton = document.querySelector('[data-testid="toggleCart-bag-button"]') ||
-                      document.querySelector('[data-testid="cart-icon"]') ||
-                      document.querySelector('button[aria-label*="bag" i]');
-
-    if (cartButton) {
-      // Vérifier si le cart est déjà ouvert
-      const globalCart = document.querySelector('[data-testid="global-cart"]');
-      const isCartOpen = globalCart && globalCart.offsetParent !== null;
-
-      if (!isCartOpen) {
-        cartButton.click();
-        await new Promise(resolve => setTimeout(resolve, 500));
-      }
-    }
-  } catch (e) {
-    console.error('[Cart Saver] Error opening cart:', e);
   }
 }
 

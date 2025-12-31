@@ -29,7 +29,6 @@ function getAuthToken() {
 
     return null;
   } catch (e) {
-    console.error('[Cart Saver] Error getting auth token:', e);
     return null;
   }
 }
